@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Minus;
+    src: url(fonts/minus/minus.ttf);
+}
+
+.rem-nav {
+    margin-bottom: 30px;
+}
+
+.rem-nav a.rem-nav-link{
+    color: rgb(255, 99, 71);
+}
+
+.rem-nav a.rem-nav-link:hover{
+    color: rgb(255, 99, 71);
+}
+
+.login-content .login-descript {
+    font-family: Minus;
+    font-size: 18px;
+    padding-bottom: 40px;
+}
+
+.login-content .login-descript h1 {
+    font-size: 35px;
+    color: rgb(0, 0, 255);
+}
+
+.login-content .form-label {
+    font-family: Degaws;
+    color: rgb(255, 99, 71);
+}
+
+.login-content .form-btn {
+    background-color: rgb(255, 255, 255);
+    padding: 5px 20px;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    font-family: Minus;
+    font-size: 22px;
+    color: rgb(0, 50, 180);
+}
+
+.login-content .form-btn:hover{
+    -webkit-transform: rotate(1deg);
+    -ms-transform: rotate(1deg);
+    -o-transform: rotate(1deg);
+    transform: rotate(1deg);
+}

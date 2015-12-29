@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='MainApp'>
+    <head>
+        <meta charset="UTF-8">
+        <title>Remmy</title>
+        <meta charset="UTF-8">
+        <title>Reminder</title>
+        <link rel="shortcut icon" href="/images/favicon.gif" type="image/gif">
+        <!-- RESET CSS -->
+        <link rel="stylesheet" href="css/normalize.css">
+        <!-- BOOTSTRAP -->
+        <link rel="stylesheet" href="lib/bootstrap-3.3.6/css/bootstrap.min.css">
+        <!-- My CSS -->
+        <link rel="stylesheet" href="css/style.css">
+        <!-- ANGULAR -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <!-- Controllers -->
+        <script src="js/controllers/NoteController.js"></script>
+        <script src="js/controllers/PanelController.js"></script>
+        <script src="js/controllers/AuthorController.js"></script>
+        <!-- Directives -->
+        <script src="js/directives/checklist-model.js"></script>
+        <!-- Model -->
+        <script src="js/main_app.js"></script>
+    </head>
+    <body class="container">
+    <style>
+        @font-face{
+            font-family: Minus;
+            src: url(fonts/minus/minus.TTF);
+        }
+
+        @font-face{
+            font-family: Degaws;
+            src: url(fonts/degaws/degaws.otf);
+        }
+    </style>
+        <!-- START CONTENT -->
+        <div ng-include="'partials/navigation.html'"></div>
+        <div ng-include="'partials/login.html'"></div>
+        <!-- END CONTENT -->
+
+        <!-- JQUERY -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <!-- BOOTSTRAP JS -->
+        <script src="lib/bootstrap-3.3.6/js/bootstrap.min.js"></script>
+    </body>
+</html>
