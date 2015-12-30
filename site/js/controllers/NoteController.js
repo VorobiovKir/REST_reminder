@@ -254,8 +254,8 @@ var NoteController = function($http) {
         this.image.actions.get();
     };
 
-    $http.get('/colors/').success(function(data) {that.colors = data;});
-    this.refreshPage();
+    /*$http.get('/colors/').success(function(data) {that.colors = data;});
+    this.refreshPage();*/
 
     this.getObj = function(id, where) {
         for (var i = 0; i < where.length; i++) {

@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="css/style.css">
         <!-- ANGULAR -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
         <!-- Controllers -->
         <script src="js/controllers/NoteController.js"></script>
         <script src="js/controllers/PanelController.js"></script>
@@ -22,8 +23,9 @@
         <script src="js/directives/checklist-model.js"></script>
         <!-- Model -->
         <script src="js/main_app.js"></script>
+        <script src="js/routes.js"></script>
     </head>
-    <body class="container">
+    <body ng-controller="AuthorController as author">
     <style>
         @font-face{
             font-family: Minus;
@@ -36,9 +38,15 @@
         }
     </style>
         <!-- START CONTENT -->
-        <div ng-include="'partials/navigation.html'"></div>
-        <!-- <div ng-include="'partials/login.html'"></div> -->
-        <div ng-include="'partials/registration.html'"></div>
+        <div ng-include="'templates/navigation.html'"></div>
+        <div ng-view></div>
+        <!-- <div ng-hide="author.isAuth">
+            <div ng-include="'templates/anonymous/login.html'"></div>
+            <div ng-include="'templates/anonymous/registration.html'"></div>
+        </div>
+        <div ng-show="author.isAuth">
+            <div ng-include="'templates/authorizated/main.html'"></div>
+        </div> -->
         <!-- END CONTENT -->
 
         <!-- JQUERY -->

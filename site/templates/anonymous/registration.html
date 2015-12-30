@@ -1,8 +1,8 @@
 <div class="login-content">
     <div class="row">
-        <img class="col-sm-4" src="/images/logo.png" height="256" width="256" alt="" />
+        <img class="col-sm-4" src="/images/registration.png" height="220" alt="" />
         <div class="col-sm-offset-1 col-sm-7 login-descript">
-            <h1>Hello World</h1>
+            <h1>Registration</h1>
             <p>
                 <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nam tempora molestias alias saepe expedita, non rem quidem. Adipisci quidem quo nobis culpa ullam praesentium, autem magni consequuntur nostrum omnis!</span>
                 <span>Beatae nam id sunt minima perspiciatis quod placeat? Atque et dicta praesentium magni deserunt placeat dolores nam assumenda, modi laudantium exercitationem distinctio optio officiis facere nulla eaque quis dolor earum.</span>
@@ -17,11 +17,23 @@
             </div>
         </div>
         <div class="form-group row">
+            <label for="inputEmail" class="col-sm-3 form-control-label form-label">Email</label>
+            <div class="col-sm-9">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group row">
             <label for="inputPassword" class="col-sm-3 form-control-label form-label">Password</label>
             <div class="col-sm-9">
                 <input type="password" class="form-control" id="inputPassword" placeholder="Password">
             </div>
         </div>
-        <button type="submit" class="btn btn-block form-btn">Confirm identity</button>
+        <div class="form-group row">
+            <label for="inputRetryPassword" class="col-sm-3 form-control-label form-label">Retry Password</label>
+            <div class="col-sm-9">
+                <input type="password" class="form-control" id="inputRetryPassword" placeholder="Repeat Password">
+            </div>
+        </div>
+        <a href ng-click="author.test('test');" type="submit" class="btn btn-block form-btn">Confirm identity</a>
     </form>
 </div>

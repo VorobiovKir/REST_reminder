@@ -3,7 +3,7 @@ __pycache__/
 *.py[cod]
 
 #my_ignore
-.venv_remmy
+.venv_remmy/
 db.sqlite3
 
 # C extensions
