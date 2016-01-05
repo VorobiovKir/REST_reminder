@@ -21,6 +21,7 @@ var AuthorController = function($http, $window) {
         .success(function(response) {
             $window.sessionStorage.token = response.key;
             console.log($window.sessionStorage);
+            that.isAuth = true;
         })
         .error(function(response) {
             delete $window.sessionStorage.token;
@@ -31,10 +32,17 @@ var AuthorController = function($http, $window) {
         $http
         .get('http://127.0.0.1:8000/rest-auth/user/')
             .success(function(response) {
-                alert('s');
+                console.log(response);
             })
             .error(function(response) {
                 alert('e');
             });
     };
+
+    this.logout = function() {
+        $http.post('http://127.0.0.1:8000/rest-auth/logout/')
+            .success(function(response) {
+                that.isAuth = false;
+            });
+    }
 };

@@ -1,6 +1,11 @@
-@font-face {
+@font-face{
+    font-family: Degaws;
+    src: url(../fonts/degaws/degaws.otf);
+}
+
+@font-face{
     font-family: Minus;
-    src: url(fonts/minus/minus.ttf);
+    src: url(../fonts/minus/minus.TTF);
 }
 
 .rem-nav {
