@@ -24,12 +24,21 @@
         <!-- Model -->
         <script src="js/main_app.js"></script>
         <script src="js/routes.js"></script>
+        <!-- Filters -->
+        <script src="js/filters/upperFirstLetter.js"></script>
     </head>
     <body ng-controller="AuthorController as author">
+       <!--  <button ng-click='author.test1()'>click</button> -->
 
         <!-- START CONTENT -->
         <div ng-include="'templates/navigation.html'"></div>
-        <div ng-view></div>
+        <div ng-if="author.isAuth">
+            <div ng-include="'templates/authorizated/main.html'"></div>
+        </div>
+        <div ng-if="!author.isAuth">
+            <div ng-include="'templates/anonymous/login.html'"></div>
+        </div>
+        <!-- <div ng-view></div> -->
         <!-- <div ng-hide="author.isAuth">
             <div ng-include="'templates/anonymous/login.html'"></div>
             <div ng-include="'templates/anonymous/registration.html'"></div>
