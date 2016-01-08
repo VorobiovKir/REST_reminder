@@ -1,7 +1,7 @@
 <!-- PANEL START -->
-<div ng-app="MainApp" ng-cloak>
+<div ng-app="MainApp" ng-cloak class="panel panel-default" style="border-top: 1px solid rgba(228, 228, 228, 0.6);">
     <div class="menu" ng-controller="PanelController as panel">
-        <ul class="nav nav-tabs">
+        <ul class="nav nav-tabs" class="panel-heading">
             <li>
                 <a role="presentation" href
                     ng-click="panel.selectTab(1);" ng-class="{ active: panel.isSelected(1) }">Home</a>
@@ -25,7 +25,7 @@
         </ul>
 <!-- PANEL END -->
 
-        <div ng-controller='NoteController as note'>
+        <div ng-controller='NoteController as note' class="panel-body">
             <div ng-show="panel.isSelected(1)" class="main_page">
                <h1>Home page</h1>
                <div class="row">

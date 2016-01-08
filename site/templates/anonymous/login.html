@@ -1,29 +1,32 @@
-<div class="login-content">
-    <div class="row">
-        <img class="col-sm-4" src="/images/logo.png" height="256" width="256" alt="" />
-        <div class="col-sm-offset-1 col-sm-7 login-descript">
-            <h1>Hello World</h1>
-            <p>
-                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nam tempora molestias alias saepe expedita, non rem quidem. Adipisci quidem quo nobis culpa ullam praesentium, autem magni consequuntur nostrum omnis!</span>
-                <span>Beatae nam id sunt minima perspiciatis quod placeat? Atque et dicta praesentium magni deserunt placeat dolores nam assumenda, modi laudantium exercitationem distinctio optio officiis facere nulla eaque quis dolor earum.</span>
-            </p>
+<div class="row login-content">
+    <div class="row col-lg-offset-3 col-lg-6 col-md-offset-2 col-md-8 col-xs-offset-1 col-xs-10">
+        <div>
+            <img class="col-sm-4" src="/images/logo.png" height="256" width="256" alt="" />
+            <div class="col-sm-offset-1 col-sm-7 login-descript">
+                <h1>Hello World</h1>
+                <p>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam nam tempora molestias alias saepe expedita, non rem quidem. Adipisci quidem quo nobis culpa ullam praesentium, autem magni consequuntur nostrum omnis!</span>
+                    <span>Beatae nam id sunt minima perspiciatis quod placeat? Atque et dicta praesentium magni deserunt placeat dolores nam assumenda, modi laudantium exercitationem distinctio optio officiis facere nulla eaque quis dolor earum.</span>
+                </p>
+            </div>
         </div>
+        <form name="loginForm" class="loginForm" class="row  col-sm-offset-2 col-sm-8" novalidate ng-submit="author.login();">
+            <p class="error" ng-if="author.error">{{author.error}}</p>
+            <div class="form-group row">
+                <label for="inputLogin" class="col-sm-3 form-control-label form-label">Login</label>
+                <div class="col-sm-9">
+                    <input type="text" ng-model="author.user.name"
+                    class="form-control" id="inputLogin" placeholder="Login" required />
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword" class="col-sm-3 form-control-label form-label">Password</label>
+                <div class="col-sm-9">
+                    <input type="password" ng-model="author.user.password"
+                    class="form-control" id="inputPassword" placeholder="Password" required />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-block form-btn" ng-disabled="loginForm.$invalid">Confirm identity</button>
+        </form>
     </div>
-    <form class="row  col-sm-offset-2 col-sm-8">
-        <div class="form-group row">
-            <label for="inputLogin" class="col-sm-3 form-control-label form-label">Login</label>
-            <div class="col-sm-9">
-                <input type="text" ng-model="author.user.name"
-                    class="form-control" id="inputLogin" placeholder="Login" />
-            </div>
-        </div>
-        <div class="form-group row">
-            <label for="inputPassword" class="col-sm-3 form-control-label form-label">Password</label>
-            <div class="col-sm-9">
-                <input type="password" ng-model="author.user.password"
-                    class="form-control" id="inputPassword" placeholder="Password" />
-            </div>
-        </div>
-        <a href ng-click="author.login();" class="btn btn-block form-btn">Confirm identity</a>
-    </form>
 </div>
