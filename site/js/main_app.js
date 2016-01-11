@@ -1,3 +1,5 @@
+'use strict';
+
 angular
     .module('MainApp', ["checklist-model", "ngRoute"])
 

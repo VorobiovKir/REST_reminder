@@ -1,4 +1,4 @@
-var AuthorController = function($http, $window, $scope, baseUrl) {
+var AuthorController = function($http, $window, $scope, $location, $rootScope, baseUrl) {
     var that = this;
 
     this.isAuth = $window.sessionStorage.token || false;
@@ -42,22 +42,6 @@ var AuthorController = function($http, $window, $scope, baseUrl) {
             });
     };
 
-    this.test = function(some) {
-        $http
-        .get(baseUrl + 'rest-auth/user/')
-            .success(function(response) {
-                // console.log(response);
-            })
-            .error(function(response) {
-                alert('e');
-            });
-    };
-
-    this.test1 = function() {
-        // $window.sessionStorage.removeItem('token');
-        console.log($window.sessionStorage);
-    };
-
     this.logout = function() {
         $http.post(baseUrl + 'rest-auth/logout/')
             .success(function(response) {
@@ -66,5 +50,51 @@ var AuthorController = function($http, $window, $scope, baseUrl) {
                 that.isAuth = false;
                 that.user = {};
             });
-    }
+    };
+
+    // this.test = function(some) {
+    //     $http
+    //     .get(baseUrl + 'rest-auth/user/')
+    //         .success(function(response) {
+    //             // console.log(response);
+    //         })
+    //         .error(function(response) {
+    //             alert('e');
+    //         });
+    // };
+
+    // this.test1 = function() {
+    //     // $window.sessionStorage.removeItem('token');
+    //     console.log($window.sessionStorage);
+    // };
+
+    // this.isInArray = function (value, array) {
+    //     return array.indexOf(value) > -1;
+    // };
+
+    // this.commonPage = ['/registration', '/'];
+
+    // $rootScope.$on("$routeChangeStart", function (event, next, current) {
+    //     console.log(next.$$route.originalPath);
+    //     console.log('its work');
+    //     console.log(that.isAuth);
+    //     if (! that.isAuth) {
+    //         if (next.$$route.originalPath && !that.isInArray(next.$$route.originalPath, that.commonPage)) {
+    //             $location.path('/login');
+    //         }
+    //     }
+    //     else {
+    //         if (next.$$route.originalPath && that.isInArray(next.$$route.originalPath, that.commonPage)) {
+    //             $location.path('/');
+    //         }
+    //     }
+
+    //     // if (next) {
+    //     //     event.preventDefault();
+    //     //     $rootScope.$evalAsync(function() {
+    //     //         $location.path('/login');
+    //     //     });
+    //     // }
+    // });
+
 };
